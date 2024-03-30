@@ -1,0 +1,215 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "ApiEventBridgeLambdaStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ApiEventBridgeLambdaStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ApiEventBridgeLambdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ApiEventBridgeLambdaStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70e82439228c5c0eeba5de23bc162f14e6ca4ac5d5220482b5e85e6b54a2ecc4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ApiEventBridgeLambdaStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ApiEventBridgeLambdaStack.assets"
+      ],
+      "metadata": {
+        "/ApiEventBridgeLambdaStack/eventProducerLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventProducerLambdaServiceRoleD019EB99"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventProducerLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventProducerLambdaServiceRoleDefaultPolicy73C54CA7"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventProducerLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventProducerLambda100D549C"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer1Lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer1LambdaServiceRoleC8CCBFC5"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer1Lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer1Lambda4AF2292E"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer1LambdaRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer1LambdaRule288E5FF9"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer1LambdaRule/AllowEventRuleApiEventBridgeLambdaStackeventConsumer1Lambda3A2F7294": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer1LambdaRuleAllowEventRuleApiEventBridgeLambdaStackeventConsumer1Lambda3A2F7294318BC23E"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SQSQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSQueue7674CD17"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SQSQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSQueuePolicy4691EEED"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer2LambdaRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer2LambdaRule54312CB1"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer2Lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer2LambdaServiceRole6B878884"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer2Lambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer2LambdaServiceRoleDefaultPolicy37CE853E"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer2Lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer2Lambda1631C47A"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/eventConsumer2Lambda/SqsEventSource:ApiEventBridgeLambdaStackSQSQueue93F85586/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eventConsumer2LambdaSqsEventSourceApiEventBridgeLambdaStackSQSQueue93F8558673C8DB35"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumer52DC1403"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumerCloudWatchRoleE43B891E"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumerAccount468DDDC0"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumerDeploymentD1A021868a8af37caaafdc0f762b784f7555ad86"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumerDeploymentStageprodDE087A58"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumerEndpoint93C2DFF8"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Default/items/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumeritems997C90A7"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Default/items/POST/ApiPermission.ApiEventBridgeLambdaStackSampleAPIEventBridgeMultiConsumerF10899BC.POST..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumeritemsPOSTApiPermissionApiEventBridgeLambdaStackSampleAPIEventBridgeMultiConsumerF10899BCPOSTitemsA86E071B"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Default/items/POST/ApiPermission.Test.ApiEventBridgeLambdaStackSampleAPIEventBridgeMultiConsumerF10899BC.POST..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumeritemsPOSTApiPermissionTestApiEventBridgeLambdaStackSampleAPIEventBridgeMultiConsumerF10899BCPOSTitems910D1EE7"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/SampleAPI-EventBridge-Multi-Consumer/Default/items/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleAPIEventBridgeMultiConsumeritemsPOSTD2DFDA56"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ApiEventBridgeLambdaStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ApiEventBridgeLambdaStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
